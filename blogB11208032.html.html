@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>運動懶人包 - 吉卜力風探索之旅</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+TC:wght@300;400;500;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ghibli: {
+                            sky: '#87CEEB',
+                            grass: '#91A46A',
+                            clay: '#D97706',
+                            cream: '#FDFCF0',
+                            ink: '#2D3436',
+                            forest: '#2D4F1E',
+                            sunset: '#FF8C42'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['"ZCOOL KuaiLe"', 'cursive'],
+                        body: ['"Noto Sans TC"', 'sans-serif'],
+                        accent: ['"Gaegu"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFCF0;
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #2D3436;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        .ghibli-border {
+            border: 3px solid #2D3436;
+            box-shadow: 5px 5px 0px #91A46A;
+        }
+
+        .sketch-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .sketch-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(145, 164, 106, 0.3);
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating { animation: float 6s ease-in-out infinite; }
+
+        .bento-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px #D97706;
+        }
+    </style>
+</head>
+<body class="font-body leading-relaxed">
+
+    <!-- Header Section -->
+    <header class="relative pt-12 pb-6 px-4 max-w-6xl mx-auto text-center">
+        <div class="inline-block px-4 py-1 mb-4 bg-ghibli-grass text-white rounded-full font-accent text-lg">
+            學號：B11208032
+        </div>
+        <h1 class="font-display text-4xl md:text-6xl text-ghibli-forest mb-6 leading-tight">
+            【運動懶人包】<br>
+            <span class="text-ghibli-clay">從猛獁象獵人到電競高手</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-medium">
+            運動到底是怎麼「玩」成全球狂熱的？一場跨越千年的趣味探索。
+        </p>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="max-w-5xl mx-auto px-4 mb-16">
+        <div class="relative group">
+            <div class="absolute -inset-4 bg-ghibli-grass/10 rounded-[2rem] transform -rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
+            <div class="ghibli-border rounded-2xl overflow-hidden bg-white relative">
+                <img src='https://opal.google/board/blobs/7577eaa7-224c-4eaa-981b-1cb1ce8f06e0' alt='Ghibli Style Sports Banner' class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-700" />
+            </div>
+            <!-- Decorative Elements -->
+            <div class="absolute -top-6 -right-6 w-20 h-20 floating">
+                <svg viewBox="0 0 100 100" class="fill-ghibli-sunset opacity-80">
+                    <path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="max-w-3xl mx-auto px-6 mb-20 text-lg md:text-xl">
+        <div class="space-y-6 text-gray-700 leading-loose italic">
+            <p>當你坐在沙發上，看著電視裡那群為了爭奪一顆球而拼命奔跑的人，或者在健身房裡對著鏡子與槓鈴奮戰時，你有沒有想過：人類為什麼要這麼麻煩？</p>
+            <p>從演化論來看，為了「非生存必要」活動消耗熱量簡直是種浪費。然而，這正是人類文明有趣的地方。運動，這項從保命技能演變而來的藝術，已成為一種全球信仰。</p>
+        </div>
+    </section>
+
+    <!-- Bento Grid Section: What is Sports? -->
+    <section class="max-w-6xl mx-auto px-4 mb-24">
+        <h2 class="text-3xl font-display text-ghibli-forest mb-10 flex items-center gap-3">
+            <span class="text-4xl">一、</span> <span class="sketch-underline">到底什麼才是「運動」？</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="md:col-span-2 bento-item ghibli-border bg-white p-8 rounded-2xl">
+                <div class="text-4xl mb-4">💪</div>
+                <h3 class="font-display text-2xl text-ghibli-clay mb-3">爆汗力（體能消耗）</h3>
+                <p class="text-gray-600">這是硬指標。必須動用到大肌肉群，讓你的心跳與呼吸在短時間內突破日常臨界值。</p>
+            </div>
+            <div class="bento-item ghibli-border bg-white p-8 rounded-2xl">
+                <div class="text-4xl mb-4">📜</div>
+                <h3 class="font-display text-2xl text-ghibli-grass mb-3">遊戲規則</h3>
+                <p class="text-gray-600">運動是人類對混亂的馴化，沒了規則，競爭就只是單純的鬥毆。</p>
+            </div>
+            <div class="bento-item ghibli-border bg-white p-8 rounded-2xl">
+                <div class="text-4xl mb-4">🏆</div>
+                <h3 class="font-display text-2xl text-ghibli-sunset mb-3">輸贏的尊嚴</h3>
+                <p class="text-gray-600">運動場是微縮的戰場。勝負判定是賦予努力意義的終點線。</p>
+            </div>
+            <div class="md:col-span-4 bento-item ghibli-border bg-blue-50 p-8 rounded-2xl flex flex-col md:flex-row items-center gap-6">
+                <div class="text-5xl">🏛️</div>
+                <div>
+                    <h3 class="font-display text-2xl text-blue-800 mb-2">專業領證（制度化）</h3>
+                    <p class="text-blue-700/80">現代運動是有「組織」的。各種協會、聯盟確保了紀錄的標準化，讓你在村口跑出的成績，能跟世界另一端的紀錄做對比。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evolution Timeline -->
+    <section class="bg-ghibli-grass/10 py-20 px-4 mb-24 rounded-[3rem]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-display text-ghibli-forest mb-12 text-center">
+                <span class="text-4xl">二、</span> 運動進化史：從保命到全民拼命
+            </h2>
+            <div class="space-y-12 relative before:absolute before:left-8 md:before:left-1/2 before:w-1 before:h-full before:bg-ghibli-grass/30">
+                
+                <!-- Ancient -->
+                <div class="relative flex flex-col md:flex-row items-center group">
+                    <div class="flex-1 md:text-right md:pr-12 mb-4 md:mb-0">
+                        <h4 class="font-display text-xl text-ghibli-clay">古代篇：生存即競技</h4>
+                        <p class="text-gray-600 mt-2">跑步是為了追獵物，投擲是為了獵捕猛獁象。古希臘人將其昇華為祭祀神明的藝術。</p>
+                    </div>
+                    <div class="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-4 border-ghibli-grass rounded-full z-10 group-hover:scale-125 transition-transform"></div>
+                    <div class="flex-1 md:pl-12"></div>
+                </div>
+
+                <!-- Medieval -->
+                <div class="relative flex flex-col md:flex-row items-center group">
+                    <div class="flex-1 md:pr-12"></div>
+                    <div class="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-4 border-ghibli-grass rounded-full z-10 group-hover:scale-125 transition-transform"></div>
+                    <div class="flex-1 md:pl-12 mt-4 md:mt-0">
+                        <h4 class="font-display text-xl text-ghibli-grass">中世紀篇：規則是浮雲</h4>
+                        <p class="text-gray-600 mt-2">節慶時全村追逐皮球，規則隨人定。這時期的運動是純粹的民間狂歡與野蠻浪漫。</p>
+                    </div>
+                </div>
+
+                <!-- Modern -->
+                <div class="relative flex flex-col md:flex-row items-center group">
+                    <div class="flex-1 md:text-right md:pr-12 mb-4 md:mb-0">
+                        <h4 class="font-display text-xl text-blue-600">現代篇：英國紳士的強迫症</h4>
+                        <p class="text-gray-600 mt-2">19世紀工業革命，人們需要標準化娛樂。規則確立，現代奧運誕生，標誌國際競技時代。</p>
+                    </div>
+                    <div class="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-4 border-ghibli-grass rounded-full z-10 group-hover:scale-125 transition-transform"></div>
+                    <div class="flex-1 md:pl-12"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why we love sports? (Main views) -->
+    <section class="max-w-6xl mx-auto px-4 mb-24">
+        <h2 class="text-3xl font-display text-ghibli-forest mb-10">
+            <span class="text-4xl">三、</span> 為什麼我們離不開運動？
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-3xl border-t-4 border-t-ghibli-grass">
+                <div class="text-3xl mb-4">🧠</div>
+                <h3 class="font-display text-xl mb-3">腦內啡的天堂</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">科學角度看，運動是合法的興奮劑。釋放的多巴胺是天然抗憂鬱劑，能緩解文明社會的慢性焦慮。</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl border-t-4 border-t-ghibli-sunset">
+                <div class="text-3xl mb-4">🤝</div>
+                <h3 class="font-display text-xl mb-3">最強黏著劑</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">運動具有跨越種族與語言的神奇力量。贏球時跟隔壁不認識的大叔擊掌，這就是運動跨越隔閡的神效。</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl border-t-4 border-t-ghibli-clay">
+                <div class="text-3xl mb-4">💰</div>
+                <h3 class="font-display text-xl mb-3">超大型吸金怪</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">在資本市場中，運動是巨大的印鈔機。頂尖運動員是行走的提款機，是力量與商業的完美共舞。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Controversy Section -->
+    <section class="max-w-4xl mx-auto px-6 mb-24">
+        <div class="bg-ghibli-ink text-white rounded-3xl p-8 md:p-12 ghibli-border overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-ghibli-sunset/20 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+            <h2 class="text-3xl font-display mb-8">
+                <span class="text-ghibli-sunset text-4xl">四、</span> 那些讓大家吵翻天的話題
+            </h2>
+            <div class="space-y-8">
+                <details class="group border-b border-white/10 pb-4 cursor-pointer">
+                    <summary class="list-none flex justify-between items-center font-display text-xl group-open:text-ghibli-sunset transition-colors">
+                        科技與化學的對決 <span class="group-open:rotate-180 transition-transform">↓</span>
+                    </summary>
+                    <p class="mt-4 text-gray-400">興奮劑問題一直是競技體育的陰影。當「變強」不再只靠訓練，這不僅是作弊，更是在挑戰運動精神的底線。</p>
+                </details>
+                <details class="group border-b border-white/10 pb-4 cursor-pointer">
+                    <summary class="list-none flex justify-between items-center font-display text-xl group-open:text-ghibli-sunset transition-colors">
+                        跨性別與平等之爭 <span class="group-open:rotate-180 transition-transform">↓</span>
+                    </summary>
+                    <p class="mt-4 text-gray-400">參賽公平性與男女球員「同工同酬」的熱烈討論，顯示出體育界在追求生理公平與社會正義之間的拉鋸。</p>
+                </details>
+                <details class="group border-b border-white/10 pb-4 cursor-pointer">
+                    <summary class="list-none flex justify-between items-center font-display text-xl group-open:text-ghibli-sunset transition-colors">
+                        「體育洗白」現象 <span class="group-open:rotate-180 transition-transform">↓</span>
+                    </summary>
+                    <p class="mt-4 text-gray-400">國家常利用大型賽事（Sportswashing）來改善國際形象，讓運動有時顯得不那麼純粹。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Section -->
+    <section class="max-w-6xl mx-auto px-4 mb-32">
+        <h2 class="text-3xl font-display text-ghibli-forest mb-12 text-center">
+            <span class="text-4xl">五、</span> 穿越時空看未來：2030年
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-white transition-colors border-2 border-transparent hover:border-ghibli-grass">
+                <div class="bg-ghibli-grass/20 p-4 rounded-xl text-3xl">🤖</div>
+                <div>
+                    <h4 class="font-display text-xl mb-2">AI當裁判，絕對沒誤判</h4>
+                    <p class="text-gray-600">透過數據科學與VAR，未來的判決將不再有爭議。AI不但能抓犯規，還能幫球員預測受傷風險。</p>
+                </div>
+            </div>
+            <div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-white transition-colors border-2 border-transparent hover:border-ghibli-clay">
+                <div class="bg-ghibli-clay/20 p-4 rounded-xl text-3xl">🎮</div>
+                <div>
+                    <h4 class="font-display text-xl mb-2">打電競也是運動？</h4>
+                    <p class="text-gray-600">隨著電競進入亞運，動手指與動雙腳的界線正在模糊。虛擬運動將成為你家客廳的世界大賽。</p>
+                </div>
+            </div>
+            <div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-white transition-colors border-2 border-transparent hover:border-ghibli-sunset">
+                <div class="bg-ghibli-sunset/20 p-4 rounded-xl text-3xl">🌿</div>
+                <div>
+                    <h4 class="font-display text-xl mb-2">綠色賽場新時尚</h4>
+                    <p class="text-gray-600">未來的大型賽事如奧運將更強調「碳中和」與場館的永續再利用，環保才是最高級的運動精神。</p>
+                </div>
+            </div>
+            <div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-white transition-colors border-2 border-transparent hover:border-blue-400">
+                <div class="bg-blue-100 p-4 rounded-xl text-3xl">🥽</div>
+                <div>
+                    <h4 class="font-display text-xl mb-2">家裡就是搖滾區</h4>
+                    <p class="text-gray-600">透過VR與AR技術，你家沙發就是球場第一排。沉浸式觀賽感將徹底顛覆運動傳播模式。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion with a soft Ghibli touch -->
+    <footer class="max-w-3xl mx-auto px-6 pb-24 text-center">
+        <div class="h-1 w-24 bg-ghibli-grass/40 mx-auto mb-10"></div>
+        <p class="text-xl md:text-2xl font-accent leading-relaxed text-ghibli-forest">
+            "運動的本質從未改變：它是一場對人類極限的探索，也是一場與自我的對話。<br>
+            無論你是為了健康、為了社交，還是為了那瞬間的激情，<br>
+            只要你開始「動」，你就已經參與了這場跨越數千年的全人類遊戲。"
+        </p>
+        <div class="mt-12 flex justify-center gap-4">
+            <span class="w-3 h-3 rounded-full bg-ghibli-grass"></span>
+            <span class="w-3 h-3 rounded-full bg-ghibli-clay"></span>
+            <span class="w-3 h-3 rounded-full bg-ghibli-sunset"></span>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth reveal on scroll logic can be added here if needed
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.bento-item, .glass-card').forEach(el => {
+                el.classList.add('transform', 'transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
