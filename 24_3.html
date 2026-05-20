@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOOK 互互宇宙：上班族與學生舒壓充電站</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Top Banner: Fun Alert -->
+    <div class="bg-amber-500 text-white text-xs md:text-sm font-bold py-2 px-4 text-center">
+        💡 學生通識課報告救星 ＆ 上班族深夜舒壓指南！100% 獨家引進 HOOK 互互宇宙知識庫 🌟
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- Fun Brand Icon -->
+                <div class="bg-amber-500 text-white p-2 rounded-xl shadow-md">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-black tracking-wider text-slate-900">HOOK 互互宇宙</h1>
+                    <p class="text-xxs text-amber-600 font-bold tracking-widest uppercase">Office & Student Portal</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#resources" class="text-slate-600 hover:text-amber-600 transition">🎒 資源庫</a>
+                <a href="#faq" class="text-slate-600 hover:text-amber-600 transition">❓ 常見問題</a>
+                <a href="#assistant" class="text-slate-600 hover:text-amber-600 transition">🤖 互互助教</a>
+            </nav>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-medium">✨ 知識純度 100%</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-amber-50 to-orange-100/60 border-b border-amber-100 py-12 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full mb-4">專為：上班族 ＆ 學生設計 ⚡</span>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+                工作卡關、讀書太累？<br class="md:hidden">來點<span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600"> 互互宇宙的終極養分 </span>吧！
+            </h2>
+            <p class="max-w-2xl mx-auto text-sm md:text-base text-slate-600 leading-relaxed mb-8">
+                本站嚴格篩選 HOOK 影片中，最適合「期末考/通識課速成」的歷史冷知識，以及「加班/宵夜」最搭的超簡便食譜。不管是伽利略的八卦、埃及死亡學測，還是如何用 1 歐元在愛爾蘭生存，這裡全都有！
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#assistant" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-amber-600/20 transition transform hover:-translate-y-0.5">💬 召喚互互小精靈問答</a>
+                <a href="#resources" class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 px-6 py-3 rounded-xl font-bold shadow-sm transition transform hover:-translate-y-0.5">📂 瀏覽舒壓資源庫</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Left 2 Cols: Resources and FAQ -->
+        <div class="lg:col-span-2 space-y-12">
+            
+            <!-- 1. Resource Library Section -->
+            <section id="resources" class="scroll-mt-20">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">🎒 互互舒壓資源庫</h3>
+                        <p class="text-xs text-slate-500 mt-1">點擊下方卡片，解鎖精緻食譜、歷史冷知識與自由行指南！</p>
+                    </div>
+                    <!-- Search Bar inside Resource Library -->
+                    <div class="relative w-full md:w-72">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="search-input" oninput="filterResources()" placeholder="搜尋：埃及、食譜、福岡..." class="w-full pl-10 pr-4 py-2 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white shadow-sm">
+                    </div>
+                </div>
+
+                <!-- Tabs/Category Selectors -->
+                <div class="flex space-x-2 overflow-x-auto pb-3 mb-6 font-medium text-xs md:text-sm">
+                    <button onclick="selectCategory('all')" id="tab-all" class="px-4 py-2 rounded-xl whitespace-nowrap bg-slate-900 text-white transition">顯示全部</button>
+                    <button onclick="selectCategory('recipe')" id="tab-recipe" class="px-4 py-2 rounded-xl whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-slate-300 transition">🍳 深夜挑戰與舒壓食譜</button>
+                    <button onclick="selectCategory('history')" id="tab-history" class="px-4 py-2 rounded-xl whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-slate-300 transition">🏛️ 通識課歷史神救援</button>
+                    <button onclick="selectCategory('travel')" id="tab-travel" class="px-4 py-2 rounded-xl whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-slate-300 transition">✈️ 低預算自由行充電</button>
+                </div>
+
+                <!-- Resource Cards Grid -->
+                <div id="resources-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Dynamic rendering via JS -->
+                </div>
+            </section>
+
+            <!-- 2. FAQ Section -->
+            <section id="faq" class="scroll-mt-20 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-black text-slate-900">❓ 常見問題 FAQ</h3>
+                    <p class="text-xs text-slate-500 mt-1">針對學生與上班族在學習與職場日常痛點，提供來自互互知識庫的解答。</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border-b border-slate-100 pb-4">
+                        <button onclick="toggleFaq(1)" class="w-full flex justify-between items-center text-left py-2 font-bold text-slate-800 hover:text-amber-600 transition">
+                            <span>📚 Q1: 期末考或通識課報告要寫歷史人物，有沒有最特別、不會跟同學撞題的靈感？</span>
+                            <span id="faq-icon-1" class="text-slate-400 transition-transform duration-200">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                        </button>
+                        <div id="faq-ans-1" class="hidden mt-2 text-sm text-slate-600 leading-relaxed space-y-2 pl-2 border-l-2 border-amber-400">
+                            <p><strong>推薦一：矛盾科學巨人「伽利略」！</strong></p>
+                            <p>他一輩子都在對抗教會權威，卻是個老派的非婚生子女父親。因為付不出嫁妝，把兩個女兒強行送進修道院長住，非常矛盾！而且他因為討厭大學規定的「穿制服」教書，憤而辭職跑到威尼斯。更離奇的是，他死後改葬時，被後人砍下了「三根手指頭與一顆牙齒」在博物館展示，這才是歷史課本沒寫的真實人生！</p>
+                            <p><strong>推薦二：被歷史除名的「阿肯納頓」與「圖坦卡門」！</strong></p>
+                            <p>圖坦卡門的爸爸阿肯納頓在古埃及發起激進宗教革命，下令關閉所有阿蒙神廟，改信太陽神阿頓，結果遭到記憶抹煞，雕像被砸爛、歷史空缺。而八歲繼位的圖坦卡門，一輩子唯一的任務就是「改回阿蒙神、否定爸爸的一切」，沒想到死後還是被連座法除名，這導致他的迷你墓穴沒被盜墓賊發現，成了現今陪葬品最完整的法老。</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border-b border-slate-100 pb-4">
+                        <button onclick="toggleFaq(2)" class="w-full flex justify-between items-center text-left py-2 font-bold text-slate-800 hover:text-amber-600 transition">
+                            <span>💻 Q2: 上班族深夜加班、學生熬夜苦讀肚子餓，推薦哪道 HOOK 的快速挑戰料理？</span>
+                            <span id="faq-icon-2" class="text-slate-400 transition-transform duration-200">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                        </button>
+                        <div id="faq-ans-2" class="hidden mt-2 text-sm text-slate-600 leading-relaxed space-y-2 pl-2 border-l-2 border-amber-400">
+                            <p><strong>第一名神級搭配：巧克力餅乾（Pepero）沾豆腐（加煉乳）！</strong></p>
+                            <p>在 24 小時甜點挑戰中意外發現的「財富密碼」！只要把巧克力棒磨碎、混入滑嫩的豆腐，再淋上滿滿煉乳，一口下去口感超級讓人迷戀，驚訝度直逼高檔巧克力奶酪（Panna Cotta），簡直是 30 秒的科技奇蹟！</p>
+                            <p><strong>第二名：威士忌珍奶！</strong></p>
+                            <p>在威士忌挑戰中，將「傑克丹尼青蘋果威士忌」灌入市售珍珠奶茶，口感層次瞬間拉滿，直接把甜膩的珍奶變成高質感的「大人系甜點」，喝完壓力一筆勾銷！</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border-b border-slate-100 pb-4">
+                        <button onclick="toggleFaq(3)" class="w-full flex justify-between items-center text-left py-2 font-bold text-slate-800 hover:text-amber-600 transition">
+                            <span>✈️ Q3: 學生與社會新鮮人預算極其有限，想要出國充電，有什麼實用的省錢指南？</span>
+                            <span id="faq-icon-3" class="text-slate-400 transition-transform duration-200">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                        </button>
+                        <div id="faq-ans-3" class="hidden mt-2 text-sm text-slate-600 leading-relaxed space-y-2 pl-2 border-l-2 border-amber-400">
+                            <p><strong>首選越南峴港（Da Nang）：</strong></p>
+                            <p>在峴港吃飯彷彿「不用錢」，一碗豐富且帶有濃郁花生香氣的傳統廣面（Mi Quang）只要 45 元台幣，必比登推薦的超澎湃炭烤大餐、海鮮、巨無霸炒飯等八道大菜吃下來竟然花不到 1000 元台幣！物美價廉到哭！</p>
+                            <p><strong>愛爾蘭（Ireland）窮遊留學法：</strong></p>
+                            <p>如果真的想去歐洲充电，愛爾蘭超市是你的生存天堂！一大包可以吃兩餐的巨大麵包只要 1 歐元，一盒濃郁優格只要 0.6 歐元，每天花少少錢就能在都柏林一邊讀書一邊放鬆，還能免費逛皮卡索的畫展喔！</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border-b border-slate-100 pb-4">
+                        <button onclick="toggleFaq(4)" class="w-full flex justify-between items-center text-left py-2 font-bold text-slate-800 hover:text-amber-600 transition">
+                            <span>🎭 Q4: 歷史課提到的 1920 年代「飛來波女郎（Flapper Girls）」，對現代女性或職場有何影響？</span>
+                            <span id="faq-icon-4" class="text-slate-400 transition-transform duration-200">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                        </button>
+                        <div id="faq-ans-4" class="hidden mt-2 text-sm text-slate-600 leading-relaxed space-y-2 pl-2 border-l-2 border-amber-400">
+                            <p>她們是一群在第一次世界大戰後發起社會革命的女性。她們剪去長髮、脫掉束身麻將衣、穿上露出小腿的直筒裙，並且<strong>大膽在公開場合補妝、化妝、抽煙與喝酒</strong>（以前化妝品必須小心隱藏在瓷娃娃或秘密罐子中，否則會被貼上不檢點的標籤）。</p>
+                            <p>最關鍵的是，因為戰後女性能夠工作，她們獲得了<strong>經濟獨立與投票權</strong>，不用再看男性或社會的臉色生存。隨身粉餅盒、旋轉口紅和膝蓋化妝（隨著爵士樂查爾斯頓舞抖動膝蓋）也在這時風行，極大地改變了現代生活與職場女性的自主地位！</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right 1 Col: AI Assistant Dialog (對話框) -->
+        <div class="lg:col-span-1">
+            <section id="assistant" class="sticky top-20 bg-slate-900 text-white rounded-3xl p-6 shadow-xl border border-slate-800 flex flex-col h-[580px]">
+                
+                <!-- Assistant Header -->
+                <div class="flex items-center space-x-3 pb-4 border-b border-slate-800">
+                    <div class="relative">
+                        <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-lg font-black shadow-md shadow-amber-500/20">
+                            🍳
+                        </div>
+                        <span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-400 ring-2 ring-slate-900"></span>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-black tracking-wide">互互宇宙・課後輔導精靈</h4>
+                        <p class="text-xxs text-slate-400">線上助理 · 唯一知識庫守護者</p>
+                    </div>
+                </div>
+
+                <!-- Suggested Prompts for Office/Students -->
+                <div class="py-3 flex flex-wrap gap-1.5 border-b border-slate-800">
+                    <p class="text-slate-400 text-xxs w-full mb-1">💡 點擊下方快速問題：</p>
+                    <button onclick="askPreset('求：深夜加班神級甜點')" class="text-xxs bg-slate-800 hover:bg-slate-700 text-amber-400 px-2 py-1 rounded-md transition border border-slate-700">深夜舒壓甜點</button>
+                    <button onclick="askPreset('求：埃及死亡學測速成')" class="text-xxs bg-slate-800 hover:bg-slate-700 text-amber-400 px-2 py-1 rounded-md transition border border-slate-700">埃及死亡學測</button>
+                    <button onclick="askPreset('求：伽利略的矛盾秘密')" class="text-xxs bg-slate-800 hover:bg-slate-700 text-amber-400 px-2 py-1 rounded-md transition border border-slate-700">伽利略秘密八卦</button>
+                    <button onclick="askPreset('求：越南必比登省錢吃法')" class="text-xxs bg-slate-800 hover:bg-slate-700 text-amber-400 px-2 py-1 rounded-md transition border border-slate-700">越南省錢大餐</button>
+                </div>
+
+                <!-- Chat Messages Body -->
+                <div id="chat-messages" class="flex-grow overflow-y-auto py-4 space-y-4 text-xs md:text-sm">
+                    <!-- Bot Initial Message -->
+                    <div class="flex items-start space-x-2">
+                        <div class="bg-amber-500 text-white font-bold p-1.5 rounded-lg text-xs shrink-0">🤖</div>
+                        <div class="bg-slate-800 text-slate-200 p-3 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed shadow-sm">
+                            哈囉！我是「互互宇宙」的課後輔導精靈！這裡嚴格守護著 HOOK 影片中所有的食譜智慧與歷史冷知識。
+                            <br><br>
+                            你想知道古埃及的木乃伊到底怎麼做？還是深夜加班要吃什麼？隨便打字問我吧！(阿彌陀佛~ 🙏)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input Footer -->
+                <div class="pt-3 border-t border-slate-800 flex gap-2">
+                    <input type="text" id="chat-input" onkeypress="handleChatKey(event)" placeholder="請輸入問題（如：埃及、甜點、鎌倉）..." class="flex-grow bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    <button onclick="sendChatMessage()" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2.5 rounded-xl font-bold transition text-xs shrink-0 flex items-center justify-center">
+                        傳送
+                    </button>
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Detailed Modal for Resource Cards Expansion -->
+    <div id="details-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl border border-slate-100 flex flex-col">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-slate-100 flex items-center justify-between sticky top-0 bg-white z-10">
+                <div class="flex items-center space-x-3">
+                    <span id="modal-category" class="text-xs font-bold px-2.5 py-1 rounded-md"></span>
+                    <h4 id="modal-title" class="text-lg font-black text-slate-950"></h4>
+                </div>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <!-- Modal Content -->
+            <div class="p-6 space-y-6 text-sm text-slate-600 leading-relaxed" id="modal-body">
+                <!-- Content injected dynamically -->
+            </div>
+            <!-- Modal Footer -->
+            <div class="p-6 border-t border-slate-100 flex justify-end bg-slate-50 rounded-b-3xl">
+                <button onclick="closeModal()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition">
+                    關閉視窗
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 text-xs md:text-sm">
+            <p class="font-medium text-slate-400 mb-2">HOOK 互互宇宙・上班族與學生舒壓充電站</p>
+            <p class="leading-relaxed">本站內容完全基於上傳之 21 部 HOOK 影片手打逐字稿。本站由 Gemini 人工智慧驅動，為教學、舒壓與知識庫展示網頁。</p>
+            <p class="mt-4 text-slate-600">© 2026 HOOK Universe Fan Station. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Unique exclusive knowledge base from HOOK's video transcripts
+        const hookData = [
+            {
+                id: "pepero-tofu",
+                title: "深夜挑戰：巧克力棒沾豆腐 (驚喜財富密碼)",
+                category: "recipe",
+                categoryChinese: "🍳 舒壓食譜",
+                summary: "24小時只吃甜點挑戰中意外爆紅！30秒內用平凡食材打造高級義式奶酪口感。",
+                author: "24小時只吃「甜點」挑戰",
+                tagColor: "bg-pink-100 text-pink-800",
+                details: `
+                    <div class="space-y-4">
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                            <h5 class="font-bold text-amber-800 mb-1">💡 上班族＆學生便利指數：★★★★★ (只需超商食材)</h5>
+                            <p class="text-xs text-slate-600">這是深夜加班或熬夜溫書時，最無負擔的療癒高甜美食。超神奇豆香與巧克力組合！</p>
+                        </div>
+                        <h6 class="font-black text-slate-900 text-base">🔧 必備材料</h6>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>杏仁巧克力餅乾棒 (Pepero) 數根</li>
+                            <li>中華豆腐（或嫩豆腐）1 盒</li>
+                            <li>甜到靈魂深處的「煉乳」</li>
+                        </ul>
+                        <h6 class="font-black text-slate-900 text-base">👨‍🍳 製作三部曲</h6>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li><strong>整齊分割</strong>：將嫩豆腐優雅地用切成等腰三角形（上底加下底乘高除二，雖然算錯了，但美味不減！）。</li>
+                            <li><strong>碎片鋪灑</strong>：將杏仁巧克力棒壓碎（像黑白大廚一樣在碗中碾碎成屑屑）。</li>
+                            <li><strong>美味昇華</strong>：將巧克力屑鋪在豆腐上，然後淋上靈魂煉乳。</li>
+                        </ol>
+                        <div class="bg-slate-100 p-3 rounded-lg text-xs italic">
+                            💬 「一入口完全是沒想像過的滋味！它完全不是巧克力豆腐，根本是高檔『巧克力奶酪』！口感神聖，簡直是前世兄弟！」—— HOOK
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: "galileo-contradictory",
+                title: "矛盾寶鼻：伽利略歷史通識課救星",
+                category: "history",
+                categoryChinese: "🏛️ 歷史科普",
+                summary: "一輩子都在對抗舊時代的科學巨人，在私生活上卻是一個極度矛盾的老派爸爸。",
+                author: "行萬里路#15：伽利略特輯",
+                tagColor: "bg-blue-100 text-blue-800",
+                details: `
+                    <div class="space-y-4">
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                            <h5 class="font-bold text-amber-800 mb-1">🎓 課堂報告爆點：同學絕對不知道的矛盾大師</h5>
+                            <p class="text-xs text-slate-600">寫伽利略只寫『自由落體』就太無聊了！用他生鏽的人際關係與矛盾家庭當靈感，通識成績絕對拿A！</p>
+                        </div>
+                        <h6 class="font-black text-slate-900 text-base">⚠️ 伽利略沒告訴你的四個矛盾秘密</h6>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>逃避大學制服</strong>：比薩大學規定教授教書必須穿著厚重的「大學制服」，伽利略對此極度憤怒，最後憤而辭職，跑到不規定穿制服的威尼斯工作！</li>
+                            <li><strong>不負責任的老爸</strong>：他與平民情人相愛，生了三個小孩（兩個女兒、一個兒子）。但因為他愛面子，怕平民身份影響自己的社會和學術前途，加上付不起龐大的女兒嫁裝，在女兒 13 歲時強行將她們送進修道院過一輩子孤獨的生活。</li>
+                            <li><strong>與大女兒的羈絆</strong>：雖然狠心，但他與大女兒（維吉尼亞）感情極佳，終生書信往來 100 多封。女兒在他遭受教廷審判、軟禁時成了他的心靈支柱，要他不要向權威低頭。大女兒死後，伽利略痛不欲生，但依然靠她的精神意志偷偷完成了重大學術著作。</li>
+                            <li><strong>死後也不放過你</strong>：他死後100年改葬，後人因為崇拜他，居然偷偷把他的「三根手指頭與一顆牙齒」拔下來在博物館展示。</li>
+                        </ul>
+                        <div class="bg-slate-100 p-3 rounded-lg text-xs italic">
+                            💬 「如果你死掉，你按快門的那隻手被割下來展示，你一定會覺得超級沒品！」—— HOOK 的無情吐嘈
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: "egypt-mummy-exam",
+                title: "前往永生：開箱古埃及死亡學測",
+                category: "history",
+                categoryChinese: "🏛️ 歷史科普",
+                summary: "古埃及人的生死考驗簡直是魔鬼級死亡學測！而木乃伊就是作答的2B鉛筆。",
+                author: "行萬里路#20：古埃及死亡學測",
+                tagColor: "bg-blue-100 text-blue-800",
+                details: `
+                    <div class="space-y-4">
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                            <h5 class="font-bold text-amber-800 mb-1">☀️ 永生考場攻略：肉體是你的2B鉛筆</h5>
+                            <p class="text-xs text-slate-600">古埃及人的世界觀中，死亡不是結束，而是前往極樂世界「蘆葦之地」的一場大型考試。而製作木乃伊是參賽的入場券！</p>
+                        </div>
+                        <h6 class="font-black text-slate-900 text-base">✏️ 埃及人的三大作答步驟</h6>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li><strong>保留你的 2B 鉛筆 (木乃伊)</strong>：古埃及人認為靈魂（巴與卡）要進行考驗，必須依附在完好的肉體上。沒有木乃伊就像去考學測沒帶 2B 鉛筆一樣，直接零分！</li>
+                            <li><strong>高/中/低價位木乃伊</strong>：根據財力，木乃伊有三種做法：高價位會用勾子把腦袋從鼻孔搗碎流出來，剖開肚子塞香料；中價位則是用藥劑「從肛門」灌入把內臟溶掉排出；低價位則是直接在沙漠曬乾。</li>
+                            <li><strong>使者之書 (課後小抄)</strong>：明界充滿了各種恐怖怪物，埃及人會在棺木上刻上或準備「使者之書」，這是一本記載了對付各種怪物咒語的「通關秘笈、考古題」。</li>
+                        </ol>
+                        <h6 class="font-black text-slate-900 text-base">🤮 歷史黑暗面：被吃掉的祖先</h6>
+                        <p class="text-xs">在中世紀到清代的歐洲，木乃伊居然被磨成粉當作時尚藥品吃掉！「頭痛就吃木乃伊的頭、腳痛就吃腳」。歐洲人辦派對甚至公開吃木乃伊。這群歐洲人到底是憑什麼害怕台灣的臭豆腐啦！</p>
+                    </div>
+                `
+            },
+            {
+                id: "vietnam-cheap-eat",
+                title: "峴港自由行：物美價廉的必比登天堂",
+                category: "travel",
+                categoryChinese: "✈️ 旅遊充電",
+                summary: "在峴港吃東西彷彿不用錢！上班族年假充電、學生低預算小資旅遊的最佳首選。",
+                author: "自由行特輯：越南峴港吃貨指南",
+                tagColor: "bg-emerald-100 text-emerald-800",
+                details: `
+                    <div class="space-y-4">
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                            <h5 class="font-bold text-amber-800 mb-1">💸 預算極致釋放：1000元吃垮海鮮必比登</h5>
+                            <p class="text-xs text-slate-600">想要出國放鬆又不想花大錢？峴港絕對是不二選擇。這裡的物價會讓你懷疑人生！</p>
+                        </div>
+                        <h6 class="font-black text-slate-900 text-base">🍜 峴港必吃清單與物價實錄</h6>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>傳統廣麵 (Mi Quang)</strong>：帶有濃濃的花生香味，麵體激似台灣粄條，配上超嫩牛肉、大蝦與黃金水煮蛋，一碗只要 <strong>45 元台幣</strong>！好吃到晚上做夢都會夢到！</li>
+                            <li><strong>必比登海鮮餐廳大爆點</strong>：點一整桌海鮮，包含奶油大蝦、必點黃金大蛤、超大炒飯、烤肉等八道重磅大菜，吃完結帳居然<strong>不到 1000 元台幣</strong>！</li>
+                            <li><strong>椰子船體驗</strong>：在會安古鎮搭乘超療癒的椰子船，雖然本來想安靜賞景，但最後一定會被強迫體驗激烈的「海上旋轉大咖啡杯」挑戰，快吐了但超好玩。</li>
+                        </ul>
+                        <div class="bg-slate-100 p-3 rounded-lg text-xs italic">
+                            💬 「峴港真的太適合住個兩三天！回台灣後絕對會失去生活能力，無法適應忙碌的社畜生活！」—— HOOK 的出國呼喊
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: "creamy-whiskey-steak",
+                title: "2000元成熟大人料理：威士忌奶油牛排",
+                category: "recipe",
+                categoryChinese: "🍳 舒壓食譜",
+                summary: "犒賞辛苦工作與學習的自己！用 2000 元的高級肋眼佐清爽蘋果威士忌奶油醬。",
+                author: "24小時只吃「威士忌」料理挑戰",
+                tagColor: "bg-pink-100 text-pink-800",
+                details: `
+                    <div class="space-y-4">
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                            <h5 class="font-bold text-amber-800 mb-1">🥩 儀式感爆棚：高級餐廳2000元風味自家重現</h5>
+                            <p class="text-xs text-slate-600">加班、熬夜累了嗎？用這一盤香氣撲鼻的威士忌牛排洗去整週的疲勞。肉質軟嫩、醬汁神級清爽！</p>
+                        </div>
+                        <h6 class="font-black text-slate-900 text-base">🔧 必備材料</h6>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>頂級肋眼牛排 1 塊 (厚切)</li>
+                            <li>大蒜、洋菇</li>
+                            <li>鮮奶油、黃芥末醬</li>
+                            <li>傑克丹尼「青蘋果威士忌」 (靈魂調味)</li>
+                        </ul>
+                        <h6 class="font-black text-slate-900 text-base">👨‍🍳 關鍵烹調秘密</h6>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li><strong>高溫鎖汁</strong>：牛排兩面用 200 度高溫迅速煎至梅納反應，隨後取出用鋁箔紙靜置鎖住肉汁（絕對不能急！）。</li>
+                            <li><strong>威士忌蘋果醬</strong>：原鍋不洗，下大蒜、洋菇、奶油炒香，加入少許「青蘋果威士忌」揮發酒精。最後分次加入鮮奶油與黃芥末醬，避免水油分離，炒出帶有清新蘋果甜香的濃郁醬汁。</li>
+                            <li><strong>切片澆淋</strong>：將牛排切成誘人的粉紅色，鋪上香菇，淋上滿滿的醬汁！</li>
+                        </ol>
+                        <div class="bg-slate-100 p-3 rounded-lg text-xs italic">
+                            💬 「一入口真的太嫩了！青蘋果威士忌把黃芥末的嗆味完全磨平，帶有微甜木桶香。這道料理絕對已經走向國際，離開亞洲了！」
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: "tutankhamun-tragic",
+                title: "行萬里路：不被承認的法老圖坦卡門",
+                category: "history",
+                categoryChinese: "🏛️ 歷史科普",
+                summary: "擁有全世界最奢華的黃金面具，他悲慘短暫的一生卻從沒人在乎過他想要什麼。",
+                author: "行萬里路#19：圖坦卡門的一生",
+                tagColor: "bg-blue-100 text-blue-800",
+                details: `
+                    <div class="space-y-4">
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                            <h5 class="font-bold text-amber-800 mb-1">🎭 圖坦卡門的心酸：活在父親陰影下的少年</h5>
+                            <p class="text-xs text-slate-600">雖然圖坦卡門名震全球，但在古埃及歷史上，他一出生就是個悲劇。他的名字甚至被後來的法老從『國王名單』中抹去。</p>
+                        </div>
+                        <h6 class="font-black text-slate-900 text-base">💔 一生痛苦的三個真相</h6>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>改名字的考驗</strong>：他原本叫「圖坦卡頓」(代表父親崇拜的太陽神阿頓)。但父親死後，年僅八歲的他被迫否定爸爸的宗教改革，改名「圖坦卡門」(回歸傳統阿蒙神)。一生的所作所為都是「在對全國否定自己爸爸」。</li>
+                            <li><strong>被抹煞的邊緣法老</strong>：雖然改回了傳統信仰，但因為他是宗教叛徒阿肯納頓的兒子，後來的法老依然非常討厭他，乾脆在官方文獻中將他的歷史徹底刪除。如果坐時光機回到過去問埃及人，大家只會回你：「他是誰啦！」</li>
+                            <li><strong>老婆的悲慘命運</strong>：圖坦卡門不到 20 歲就去世，他的老婆安克赫森阿蒙（同時也是他的親姐姐）被迫要嫁給自己的外公「阿伊」（僕人出身但想奪取王位）。她曾寫信向外國國王求救求婚，最終失敗，婚後不久便神祕地消失在歷史中。</li>
+                        </ul>
+                    </div>
+                `
+            },
+            {
+                id: "1920s-makeup-liberation",
+                title: "老化妝品開箱：1920年代飛來波女郎革命",
+                category: "history",
+                categoryChinese: "🏛️ 歷史科普",
+                summary: "看100年前的老化妝品，如何成為女性對抗父權與爭取獨立的超強武器！",
+                author: "史來則靈#4：100年前老美妝",
+                tagColor: "bg-blue-100 text-blue-800",
+                details: `
+                    <div class="space-y-4">
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                            <h5 class="font-bold text-amber-800 mb-1">💄 職場女性與學生的啟發：用口紅挑釁舊世界</h5>
+                            <p class="text-xs text-slate-600">在1920年代之前，女性化妝被視為大逆不道，化妝品必須藏在精緻的瓷罐裡。直到『飛來波女郎（Flapper Girls）』出現，這一切徹底顛覆！</p>
+                        </div>
+                        <h6 class="font-black text-slate-900 text-base">💄 劃時代的女郎美妝革命</h6>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>短髮與裸露的膝蓋</strong>：她們剪短髮、換上直筒裙，甚至在膝蓋上化妝、畫上男友的臉。跳著查爾斯頓舞，讓膝蓋閃閃發光。</li>
+                            <li><strong>公開場合無情補妝</strong>：她們大膽地在酒吧與公共場合拿出金屬隨身粉餅盒、用推桿推出口紅大肆補妝。這在當時是對「男權社會與天然美女規範」最性感的挑釁。</li>
+                            <li><strong>經濟獨立是唯一王道</strong>：一戰後，女性開始進入職場工作，擁有了自己的收入、甚至獲得了投票權。「她們不用再看別人的眼色，可以靠自己精緻且驕傲地活下去！」</li>
+                        </ul>
+                    </div>
+                `
+            },
+            {
+                id: "ireland-budget-study",
+                title: "愛爾蘭充電留學：超省錢學生生存指南",
+                category: "travel",
+                categoryChinese: "✈️ 旅遊充電",
+                summary: "HOOK 30歲毅然出國短期遊學！教你如何在物價超高的都柏林健康存活。",
+                author: "短期遊學特輯：愛爾蘭生活Log",
+                tagColor: "bg-emerald-100 text-emerald-800",
+                details: `
+                    <div class="space-y-4">
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                            <h5 class="font-bold text-amber-800 mb-1">🍀 走出舒適圈：大齡留學生的生存法則</h5>
+                            <p class="text-xs text-slate-600">30 歲依然有勇氣出國讀書！只要敢開口、不怕說錯，語言就是最棒的溝通工具。</p>
+                        </div>
+                        <h6 class="font-black text-slate-900 text-base">💶 都柏林省錢生存術</h6>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>超市雙寶 (麵包與優格)</strong>：都柏林物價其實很高，但超市的巨無霸麵包只要 <strong>1 歐元</strong>，而濃郁優格更便宜，只要 <strong>0.6 歐元</strong>！這兩樣東西可以讓學生和窮遊族在歐洲活得非常富裕。</li>
+                            <li><strong>免費參觀畢卡索</strong>：愛爾蘭國家美術館 (National Gallery of Ireland) 可以免費入館看畢卡索的真跡！這是身為學生的最大福利，時間完全自由，想看什麼就看什麼。</li>
+                            <li><strong>白布丁與黑布丁 (必吃早餐)</strong>：愛爾蘭傳統早餐（比英式早餐更有誠意）有一種獨特的「白布丁」和「黑布丁」（類似五天沒吃完放冰箱的米血糕，但吃起來是世界第一美味的香腸風味！）。</li>
+                        </ul>
+                        <div class="bg-slate-100 p-3 rounded-lg text-xs italic">
+                            💬 「不要怕開口，語言只是溝通工具。就算講得不精準，我們也不會嘲笑中文不好的外國人，反而會覺得他們很努力、很可愛！」—— HOOK 的暖心留學叮嚀
+                        </div>
+                    </div>
+                `
+            }
+        ];
+
+        // Current Active Category
+        let activeCategory = 'all';
+
+        // Filter and Render Cards
+        function renderResourceCards(data) {
+            const grid = document.getElementById('resources-grid');
+            grid.innerHTML = '';
+
+            if (data.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-slate-400 bg-white border border-slate-200 rounded-2xl">
+                        🔍 找不到相關資源，請試試其他關鍵字！
+                    </div>
+                `;
+                return;
+            }
+
+            data.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col justify-between p-5";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xxs font-bold px-2 py-1 rounded-md ${item.tagColor}">${item.categoryChinese}</span>
+                            <span class="text-xxs text-slate-400">${item.author}</span>
+                        </div>
+                        <h4 class="font-black text-slate-950 text-base md:text-lg mb-2 hover:text-amber-600 transition cursor-pointer" onclick="openModal('${item.id}')">${item.title}</h4>
+                        <p class="text-xs md:text-sm text-slate-500 leading-relaxed mb-4">${item.summary}</p>
+                    </div>
+                    <button onclick="openModal('${item.id}')" class="w-full bg-slate-50 hover:bg-amber-50 text-slate-700 hover:text-amber-700 text-xs font-bold py-2 px-4 rounded-xl border border-slate-200 hover:border-amber-200 transition">
+                        📖 閱讀完整攻略
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Handle Category Tab Selection
+        function selectCategory(category) {
+            activeCategory = category;
+            
+            // Reset Tab UI
+            const tabs = ['all', 'recipe', 'history', 'travel'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if (t === category) {
+                    btn.className = "px-4 py-2 rounded-xl whitespace-nowrap bg-slate-900 text-white transition";
+                } else {
+                    btn.className = "px-4 py-2 rounded-xl whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-slate-300 transition";
+                }
+            });
+
+            filterResources();
+        }
+
+        // Search & Filter Trigger
+        function filterResources() {
+            const query = document.getElementById('search-input').value.trim().toLowerCase();
+            let filtered = hookData;
+
+            if (activeCategory !== 'all') {
+                filtered = filtered.filter(item => item.category === activeCategory);
+            }
+
+            if (query !== '') {
+                filtered = filtered.filter(item => 
+                    item.title.toLowerCase().includes(query) || 
+                    item.summary.toLowerCase().includes(query) ||
+                    item.categoryChinese.toLowerCase().includes(query) ||
+                    item.details.toLowerCase().includes(query)
+                );
+            }
+
+            renderResourceCards(filtered);
+        }
+
+        // Modal Functionality
+        function openModal(id) {
+            const item = hookData.find(d => d.id === id);
+            if (!item) return;
+
+            document.getElementById('modal-title').innerText = item.title;
+            document.getElementById('modal-category').innerText = item.categoryChinese;
+            document.getElementById('modal-category').className = `text-xs font-bold px-2.5 py-1 rounded-md ${item.tagColor}`;
+            document.getElementById('modal-body').innerHTML = item.details;
+            
+            document.getElementById('details-modal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden'); // Prevent background scroll
+        }
+
+        function closeModal() {
+            document.getElementById('details-modal').classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // FAQ Collapse Toggle
+        function toggleFaq(index) {
+            const ans = document.getElementById(`faq-ans-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // AI Chatbot Helper System (Directly mapping to client-side exclusive knowledge)
+        const botAnswers = {
+            "深夜加班神級甜點": `<strong>💡 互互小助手為你深夜開小灶：</strong><br><br>
+                推薦你最猛的<strong>「Pepero巧克力豆腐嫩奶酪」</strong>！<br>
+                1. 挖出一盒中華豆腐嫩豆腐，切成漂亮的三角形。<br>
+                2. 把超商買來的杏仁巧克力棒（Pepero）無情壓扁成粉末。<br>
+                3. 把巧克力屑灑在豆腐上，接著淋上靈魂煉乳。<br><br>
+                「吃下去直接頭腦爆掉、眼睛瞎掉！有一種神祕的奶酪感，超級適合深夜熬夜的你，30秒就能完成的財富密碼！」🙏`,
+            "埃及死亡學測速成": `<strong>🏛️ 通識課歷史神救援——古埃及死亡學測：</strong><br><br>
+                在古埃及人眼裡，死後世界有一場嚴格考試，通過了才能去「蘆葦之地」享受永生：<br><br>
+                1. <strong>肉體是你的2B鉛筆</strong>：如果沒有木乃伊保留肉體，靈魂沒辦法作答，直接零分。<br>
+                2. <strong>高、中、低價位木乃伊</strong>：高價位由鼻孔搗碎腦袋流出，中價位從肛門灌藥液溶解，低價位用沙漠曬乾。<br>
+                3. <strong>使者之書 (考古題)</strong>：記錄對付各種恐怖怪物的咒語（通關小抄）。<br><br>
+                💡 <em>彩蛋：</em> 中世紀歐洲人因為太迷信，居然把木乃伊磨成粉當藥吃，痛哪裡補哪裡，簡直是迷信巔峰！`,
+            "伽利略的矛盾秘密": `<strong>🏛️ 伽利略的歷史矛盾大爆料：</strong><br><br>
+                歷史課本不會寫的真實伽利略：<br>
+                - <strong>制服恐懼症</strong>：因為極度痛恨大學強迫教授穿厚重「大學制服」教書，憤而從比薩大學辭職。<br>
+                - <strong>矛盾的老爸</strong>：一生對抗權威，卻強行把兩個非婚生女兒送進修道院長住，只因付不起高昂的嫁妝。<br>
+                - <strong>死後被偷手指</strong>：他死後100年改葬，崇拜他的人居然把他的三根手指和一顆牙齒鋸下來展示！目前就在佛羅倫斯科學博物館展出，想拍照按快門還會想到他那隻被割下的手。`,
+            "越南必比登省錢吃法": `<strong>✈️ 越南峴港物美價廉省錢大餐：</strong><br><br>
+                一到連假，上班族跟學生最愛去越南峴港，因為物價低到像開外掛：<br>
+                - <strong>神級廣麵 (Mi Quang)</strong>：厚實像板條，配上香濃花生粉和大蝦、超嫩牛肉，一碗居然只要 <strong>45元台幣</strong>！<br>
+                - <strong>必比登海鮮爆點</strong>：隨便在巷弄找到必比登推薦名店，點滿整桌奶油大蝦、必點黃金大蛤、巨無霸蛋炒飯，八道大菜结帳竟然不用 1000 元台幣！`,
+            "預算": `愛爾蘭窮遊好康！如果預算吃緊，超市裡 <strong>1 歐元的巨大麵包</strong>可以吃兩餐，搭配 <strong>0.6 歐元的超濃優格</strong>，在都柏林就能活得像百萬富翁。還可以免費看國家美術館的畢卡索作品！`,
+            "福岡": `福岡最有名的是巨大明太子！但 HOOK 提醒你，單吃真的「超級鹹」，一定要配一大碗白飯。另外，福岡最讚的還有屋台文化（移動的文化遺產），以及糸島市爬神社、看夕陽！`,
+            "鎌倉": `1950年的日北觀光局指南與現今幾乎一樣！鎌倉大佛、長谷寺地藏洞窟、江之島天兔夫妻饅頭、現壓大章魚蝦餅，一整天行程充實到膝蓋軟骨直接磨損！`
+        };
+
+        function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const query = input.value.trim();
+            if (!query) return;
+
+            appendMessage('user', query);
+            input.value = '';
+
+            // Simulate Bot Typing response
+            setTimeout(() => {
+                let reply = `<strong>🤖 互互助教表示：</strong><br><br>
+                「你問的這個，我的知識庫裡好想有，但又好像不完全一樣！要不要試試搜尋『埃及』、『伽利略』、『甜點』、『預算』或『福岡』？我會給你最無情的 HOOK 風格解答！」`;
+
+                // Keyword match logic based strictly on the uploaded text contents
+                const keys = Object.keys(botAnswers);
+                for (let key of keys) {
+                    if (query.toLowerCase().includes(key.toLowerCase()) || key.toLowerCase().includes(query.toLowerCase())) {
+                        reply = botAnswers[key];
+                        break;
+                    }
+                }
+                
+                // Extra contextual checks
+                if (query.includes('埃及') || query.includes('木乃伊') || query.includes('圖坦卡門') || query.includes('法老')) {
+                    reply = botAnswers["埃及死亡學測速成"] + "<br><br><em>(還有圖坦卡門的悲慘故事，他的名字可是被後世法老無情除名的喔！「你是誰啦！」)</em>";
+                } else if (query.includes('甜點') || query.includes('豆腐') || query.includes('食譜') || query.includes('料理') || query.includes('吃')) {
+                    reply = botAnswers["深夜加班神級甜點"] + "<br><br><em>(另外還有：威士忌奶油烤肋眼牛排，淋上傑克丹尼青蘋果威士忌鮮奶油黃芥末醬，口感直接走向國際！)</em>";
+                } else if (query.includes('伽利略') || query.includes('比薩') || query.includes('秘密') || query.includes('歷史')) {
+                    reply = botAnswers["伽利略的矛盾秘密"];
+                } else if (query.includes('越南') || query.includes('峴港') || query.includes('省錢') || query.includes('自由行')) {
+                    reply = botAnswers["越南必比登省錢吃法"];
+                } else if (query.includes('留學') || query.includes('英文') || query.includes('愛爾蘭') || query.includes('學')) {
+                    reply = botAnswers["預算"];
+                }
+
+                appendMessage('bot', reply);
+            }, 600);
+        }
+
+        function appendMessage(sender, text) {
+            const box = document.getElementById('chat-messages');
+            const msg = document.createElement('div');
+            msg.className = "flex items-start space-x-2";
+            
+            if (sender === 'user') {
+                msg.className = "flex items-start space-x-2 justify-end";
+                msg.innerHTML = `
+                    <div class="bg-amber-600 text-white p-3 rounded-2xl rounded-tr-none max-w-[85%] leading-relaxed shadow-sm">
+                        ${text}
+                    </div>
+                    <div class="bg-slate-700 text-white font-bold p-1.5 rounded-lg text-xs shrink-0">👤</div>
+                `;
+            } else {
+                msg.innerHTML = `
+                    <div class="bg-amber-500 text-white font-bold p-1.5 rounded-lg text-xs shrink-0">🤖</div>
+                    <div class="bg-slate-800 text-slate-200 p-3 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed shadow-sm">
+                        ${text}
+                    </div>
+                `;
+            }
+            
+            box.appendChild(msg);
+            box.scrollTop = box.scrollHeight; // Autoscroll to bottom
+        }
+
+        function handleChatKey(e) {
+            if (e.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        function askPreset(text) {
+            appendMessage('user', text);
+            setTimeout(() => {
+                let cleanKey = text.replace("求：", "");
+                if (botAnswers[cleanKey]) {
+                    appendMessage('bot', botAnswers[cleanKey]);
+                } else {
+                    appendMessage('bot', "互互助教大當機！請點選其他氣泡或輸入關鍵字哦！");
+                }
+            }, 500);
+        }
+
+        // Initialize Page
+        window.onload = function() {
+            renderResourceCards(hookData);
+        };
+    </script>
+</body>
+</html>
