@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="zh-TW" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -948,18 +948,8 @@
         <!-- Chat History -->
         <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 text-xs bg-slate-50">
             <div class="flex items-start gap-2.5">
-                <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center overflow-hidden border border-slate-200 shrink-0">
-                    <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20,50 Q15,80 30,80 L70,80 Q85,80 80,50 Z" fill="#2D2D2D" />
-                        <path d="M35,76 C35,68 65,68 65,76 L65,85 C65,92 35,92 35,85 Z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
-                        <circle cx="50" cy="48" r="26" fill="#FFF0E5" />
-                        <circle cx="33" cy="52" r="3.5" fill="#FFB7B2" opacity="0.75" />
-                        <circle cx="67" cy="52" r="3.5" fill="#FFB7B2" opacity="0.75" />
-                        <ellipse cx="40" cy="46" rx="3.5" ry="4.5" fill="#222222" />
-                        <ellipse cx="60" cy="46" rx="3.5" ry="4.5" fill="#222222" />
-                        <path d="M46,54 Q50,58 54,54" stroke="#E05B49" stroke-width="2" stroke-linecap="round" fill="none" />
-                        <path d="M22,40 C30,22 70,22 78,40 C72,28 60,26 50,30 C40,26 28,28 22,40 Z" fill="#2D2D2D" />
-                    </svg>
+                <div class="w-7 h-7 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 shrink-0">
+                  <img src="AI_final_P3.png" class="w-full h-full object-cover">
                 </div>
                 <div class="bg-white border border-slate-200 text-slate-700 p-3 rounded-2xl rounded-tl-none max-w-[80%] leading-relaxed shadow-sm">
                     你好！我是采璇の小助理。我可以為您即時解答 Selena 的**「學歷科系、工作經歷、人資系統、Excel 自動化專案」**喔！
@@ -1423,21 +1413,11 @@
         const thinkBubble = document.createElement('div');
         thinkBubble.className = 'flex items-start gap-2.5';
         thinkBubble.innerHTML = `
-            <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center overflow-hidden border border-slate-200 shrink-0">
-                <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20,50 Q15,80 30,80 L70,80 Q85,80 80,50 Z" fill="#2D2D2D" />
-                    <path d="M35,76 C35,68 65,68 65,76 L65,85 C65,92 35,92 35,85 Z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
-                    <circle cx="50" cy="48" r="26" fill="#FFF0E5" />
-                    <circle cx="33" cy="52" r="3.5" fill="#FFB7B2" opacity="0.75" />
-                    <circle cx="67" cy="52" r="3.5" fill="#FFB7B2" opacity="0.75" />
-                    <ellipse cx="40" cy="46" rx="3.5" ry="4.5" fill="#222222" />
-                    <ellipse cx="60" cy="46" rx="3.5" ry="4.5" fill="#222222" />
-                    <path d="M46,54 Q50,58 54,54" stroke="#E05B49" stroke-width="2" stroke-linecap="round" fill="none" />
-                    <path d="M22,40 C30,22 70,22 78,40 C72,28 60,26 50,30 C40,26 28,28 22,40 Z" fill="#2D2D2D" />
-                </svg>
+            <div class="w-7 h-7 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 shrink-0">
+              <img src="AI_final_P3.png" class="w-full h-full object-cover">
             </div>
             <div class="bg-white border border-slate-200 text-slate-400 p-3 rounded-2xl rounded-tl-none max-w-[80%] leading-relaxed shadow-sm flex items-center gap-1.5">
-                <i class="fa-solid fa-circle-notch animate-spin"></i> 助理正在查詢中...
+              <i class="fa-solid fa-circle-notch animate-spin"></i> 助理正在查詢中...
             </div>
         `;
         chatMessages.appendChild(thinkBubble);
@@ -1487,22 +1467,13 @@
                 const botBubble = document.createElement('div');
                 botBubble.className = 'flex items-start gap-2.5';
                 botBubble.innerHTML = `
-                    <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center overflow-hidden border border-slate-200 shrink-0">
-                        <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20,50 Q15,80 30,80 L70,80 Q85,80 80,50 Z" fill="#2D2D2D" />
-                            <circle cx="50" cy="48" r="26" fill="#FFF0E5" />
-                            <circle cx="33" cy="52" r="3.5" fill="#FFB7B2" opacity="0.75" />
-                            <circle cx="67" cy="52" r="3.5" fill="#FFB7B2" opacity="0.75" />
-                            <ellipse cx="40" cy="46" rx="3.5" ry="4.5" fill="#222222" />
-                            <ellipse cx="60" cy="46" rx="3.5" ry="4.5" fill="#222222" />
-                            <path d="M46,54 Q50,58 54,54" stroke="#E05B49" stroke-width="2" stroke-linecap="round" fill="none" />
-                            <path d="M22,40 C30,22 70,22 78,40 C72,28 60,26 50,30 C40,26 28,28 22,40 Z" fill="#2D2D2D" />
-                        </svg>
-                    </div>
-                    <div class="bg-white border border-slate-200 text-slate-700 p-3 rounded-2xl rounded-tl-none max-w-[80%] leading-relaxed shadow-sm">
-                        ${finalBotResponse.replace(/\n/g, '<br>')}
-                    </div>
-                `;
+                <div class="w-7 h-7 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 shrink-0">
+                  <img src="AI_final_P3.png" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-white border border-slate-200 text-slate-700 p-3 rounded-2xl rounded-tl-none max-w-[80%] leading-relaxed shadow-sm">
+                  ${finalBotResponse.replace(/\n/g, '<br>')}
+                </div>
+            `;
                 chatMessages.appendChild(botBubble);
             } else {
                 throw new Error("Empty response");
@@ -1520,23 +1491,14 @@
                 finalAnswer = `您好，關於您詢問的「${text}」，小助理在采璇的履歷知識庫中暫時查不到對應的內容喔！<br><br>如果有任何進一步的合作、討論或面試機會，歡迎直接與采璇聯繫：<br><br><strong>📞 聯絡人：楊采璇 Selena</strong><br>📱 電話：0978-224-332<br>✉️ Email：<a href="mailto:caixuan1005@gmail.com" class="text-blue-600 underline">caixuan1005@gmail.com</a><br><br>💡 或是您也可以直接滑動至頁面最下方，於聯絡表單中留下您的寶貴訊息，采璇將會主動向您聯繫喔！`;
             }
 
-            botBubble.innerHTML = `
-                <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center overflow-hidden border border-slate-200 shrink-0">
-                    <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20,50 Q15,80 30,80 L70,80 Q85,80 80,50 Z" fill="#2D2D2D" />
-                        <circle cx="50" cy="48" r="26" fill="#FFF0E5" />
-                        <circle cx="33" cy="52" r="3.5" fill="#FFB7B2" opacity="0.75" />
-                        <circle cx="67" cy="52" r="3.5" fill="#FFB7B2" opacity="0.75" />
-                        <ellipse cx="40" cy="46" rx="3.5" ry="4.5" fill="#222222" />
-                        <ellipse cx="60" cy="46" rx="3.5" ry="4.5" fill="#222222" />
-                        <path d="M46,54 Q50,58 54,54" stroke="#E05B49" stroke-width="2" stroke-linecap="round" fill="none" />
-                        <path d="M22,40 C30,22 70,22 78,40 C72,28 60,26 50,30 C40,26 28,28 22,40 Z" fill="#2D2D2D" />
-                    </svg>
-                </div>
-                <div class="bg-white border border-slate-200 text-slate-700 p-3 rounded-2xl rounded-tl-none max-w-[80%] leading-relaxed shadow-sm">
-                    ${finalAnswer}
-                </div>
-            `;
+           botBubble.innerHTML = `
+            <div class="w-7 h-7 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 shrink-0">
+              <img src="AI_final_P3.png" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-white border border-slate-200 text-slate-700 p-3 rounded-2xl rounded-tl-none max-w-[80%] leading-relaxed shadow-sm">
+              ${finalBotResponse.replace(/\n/g, '<br>')}
+            </div>
+        `;
             chatMessages.appendChild(botBubble);
         }
         
